@@ -13,26 +13,80 @@
     <style>
         .navigation {
             display: flex;
-            justify-content: center; /* Center the navigation items */
-            gap: 20px; /* Space between items */
-            padding: 10px 0; /* Padding around the navigation */
-            background-color: #f0f0f0; /* Optional: background color */
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+            background-color: #f0f0f0;
         }
 
         .navigation a {
-            text-decoration: none; /* Remove underline from links */
-            color: #333; /* Set link color */
-            padding: 5px 10px; /* Padding around links */
-            border-radius: 4px; /* Rounded corners */
-            transition: background-color 0.3s; /* Smooth transition for hover effect */
+            text-decoration: none;
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
         }
 
         .navigation a:hover {
-            background-color: #ddd; /* Change background on hover */
+            background-color: #ddd;
         }
 
         .current {
-            font-weight: bold; /* Highlight current page */
+            font-weight: bold;
+        }
+
+        .programme {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        .programme-day {
+            flex: 1;
+            min-width: 280px;
+            max-width: 420px;
+        }
+
+        table.programme-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+        }
+
+        table.programme-table th,
+        table.programme-table td {
+            border: 1px solid #ccc;
+            padding: 4px 6px;
+            vertical-align: top;
+        }
+
+        table.programme-table th {
+            background-color: #f7f7f7;
+            text-align: center;
+            font-size: 1.05em;
+        }
+
+        table.programme-table thead tr.header-row th {
+            border-bottom: 2px solid #999;
+        }
+
+        /* Section headers and separators */
+        tbody tr.section-header td {
+            background-color: #eee;
+            font-weight: bold;
+            text-align: left;
+            border-top: 2px solid #999;
+        }
+
+        tbody tr.section-separator td {
+            border: none;
+            border-top: 2px solid #999;
+            padding: 6px 0;
+            font-style: italic;
+            text-align: center;
+            background-color: #fdfdfd;
         }
     </style>
 </head>
@@ -56,10 +110,277 @@
         <a title="Local Information" href="local">Local Information</a>
     </div>
 
-    <h3 style="text-align: center;">Program</h3>
-    <p>
-      To be announced
-    </p>
+    <h3 style="text-align: center;">Preliminary time table</h3>
+
+    <div class="programme">
+        <!-- 3rd August -->
+        <div class="programme-day" id="day-1">
+            <table class="programme-table">
+                <thead>
+                    <tr>
+                        <th colspan="3">3rd August</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Section 1 -->
+                    <tr class="section-header">
+                        <td colspan="3">Section 1 &mdash; Chair: tba</td>
+                    </tr>
+
+                    <!-- Opening -->
+                    <tr>
+                        <td>9:00 - 9:10</td>
+                        <td></td>
+                        <td>Opening</td>
+                    </tr>
+
+                    <!-- Invited speaker 1 -->
+                    <tr>
+                        <td>9:10 - 10:10</td>
+                        <td>Invited speaker 1</td>
+                        <td></td>
+                    </tr>
+
+                    <!-- Coffee break -->
+                    <tr class="section-separator">
+                        <td colspan="3">10:10 - 10:30 &mdash; Coffee break</td>
+                    </tr>
+
+                    <!-- Section 2 -->
+                    <tr class="section-header">
+                        <td colspan="3">Section 2 &mdash; Chair: tba</td>
+                    </tr>
+
+                    <!-- Long Talk 1 -->
+                    <tr>
+                        <td>10:30 - 11:10</td>
+                        <td></td>
+                        <td>Long Talk 1</td>
+                    </tr>
+
+                    <!-- Long Talk 2 -->
+                    <tr>
+                        <td>11:10 - 11:50</td>
+                        <td></td>
+                        <td>Long Talk 2</td>
+                    </tr>
+
+                    <!-- Long Talk 3 -->
+                    <tr>
+                        <td>11:50 - 12:30</td>
+                        <td></td>
+                        <td>Long Talk 3</td>
+                    </tr>
+
+                    <!-- Lunch -->
+                    <tr class="section-separator">
+                        <td colspan="3">12:30 - 14:00 &mdash; Lunch</td>
+                    </tr>
+
+                    <!-- Section 3 -->
+                    <tr class="section-header">
+                        <td colspan="3">Section 3 &mdash; Chair: tba</td>
+                    </tr>
+
+                    <!-- Short Talk 1 -->
+                    <tr>
+                        <td>14:00 - 14:20</td>
+                        <td></td>
+                        <td>Short Talk 1</td>
+                    </tr>
+
+                    <!-- Long Talk 4 -->
+                    <tr>
+                        <td>14:20 - 15:00</td>
+                        <td></td>
+                        <td>Long Talk 4</td>
+                    </tr>
+
+                    <!-- Long Talk 5 -->
+                    <tr>
+                        <td>15:00 - 15:40</td>
+                        <td></td>
+                        <td>Long Talk 5</td>
+                    </tr>
+
+                    <!-- Coffee Break -->
+                    <tr class="section-separator">
+                        <td colspan="3">15:40 - 16:00 &mdash; Coffee Break</td>
+                    </tr>
+
+                    <!-- Section 4 -->
+                    <tr class="section-header">
+                        <td colspan="3">Section 4 &mdash; Chair: tba</td>
+                    </tr>
+
+                    <!-- Short Talk 2 -->
+                    <tr>
+                        <td>16:00 - 16:20</td>
+                        <td></td>
+                        <td>Short Talk 2</td>
+                    </tr>
+
+                    <!-- Long Talk 6 -->
+                    <tr>
+                        <td>16:20 - 17:00</td>
+                        <td></td>
+                        <td>Long Talk 6</td>
+                    </tr>
+
+                    <!-- Long Talk 7 -->
+                    <tr>
+                        <td>17:00 - 17:40</td>
+                        <td></td>
+                        <td>Long Talk 7</td>
+                    </tr>
+
+                    <!-- Evening / Business Meeting & Dinner -->
+                    <tr class="section-separator">
+                        <td colspan="3">17:40 - 18:00 &mdash; Coffee Break</td>
+                    </tr>
+                    <tr>
+                        <td>18:00 - 18:30</td>
+                        <td colspan="2">Business Meeting</td>
+                    </tr>
+
+                    <!-- Evening / Dinner -->
+                    <tr class="section-separator">
+                        <td colspan="3">Evening</td>
+                    </tr>
+                    <tr>
+                        <td>20:00</td>
+                        <td colspan="2">Conference Dinner</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 4th August -->
+        <div class="programme-day" id="day-2">
+            <table class="programme-table">
+                <thead>
+                    <tr>
+                        <th colspan="3">4th August</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Section 5 -->
+                    <tr class="section-header">
+                        <td colspan="3">Section 5 &mdash; Chair: tba</td>
+                    </tr>
+
+                    <!-- Invited speaker 2 -->
+                    <tr>
+                        <td>9:10 - 10:10</td>
+                        <td>Invited speaker 2</td>
+                        <td></td>
+                    </tr>
+
+                    <!-- Coffee break -->
+                    <tr class="section-separator">
+                        <td colspan="3">10:10 - 10:30 &mdash; Coffee break</td>
+                    </tr>
+
+                    <!-- Section 6 -->
+                    <tr class="section-header">
+                        <td colspan="3">Section 6 &mdash; Chair: tba</td>
+                    </tr>
+
+                    <!-- Long Talk 8 -->
+                    <tr>
+                        <td>10:30 - 11:10</td>
+                        <td></td>
+                        <td>Long Talk 8</td>
+                    </tr>
+
+                    <!-- Long Talk 9 -->
+                    <tr>
+                        <td>11:10 - 11:50</td>
+                        <td></td>
+                        <td>Long Talk 9</td>
+                    </tr>
+
+                    <!-- Long Talk 10 -->
+                    <tr>
+                        <td>11:50 - 12:30</td>
+                        <td></td>
+                        <td>Long Talk 10</td>
+                    </tr>
+
+                    <!-- Lunch -->
+                    <tr class="section-separator">
+                        <td colspan="3">12:30 - 14:00 &mdash; Lunch</td>
+                    </tr>
+
+                    <!-- Section 7 -->
+                    <tr class="section-header">
+                        <td colspan="3">Section 7 &mdash; Chair: tba</td>
+                    </tr>
+
+                    <!-- Short Talk 3 -->
+                    <tr>
+                        <td>14:00 - 14:20</td>
+                        <td></td>
+                        <td>Short Talk 3</td>
+                    </tr>
+
+                    <!-- Long Talk 11 -->
+                    <tr>
+                        <td>14:20 - 15:00</td>
+                        <td></td>
+                        <td>Long Talk 11</td>
+                    </tr>
+
+                    <!-- Long Talk 12 -->
+                    <tr>
+                        <td>15:00 - 15:40</td>
+                        <td></td>
+                        <td>Long Talk 12</td>
+                    </tr>
+
+                    <!-- Coffee Break -->
+                    <tr class="section-separator">
+                        <td colspan="3">15:40 - 16:00 &mdash; Coffee Break</td>
+                    </tr>
+
+                    <!-- Section 8 -->
+                    <tr class="section-header">
+                        <td colspan="3">Section 8 &mdash; Chair: tba</td>
+                    </tr>
+
+                    <!-- Long Talk 13 -->
+                    <tr>
+                        <td>16:00 - 16:40</td>
+                        <td></td>
+                        <td>Long Talk 13</td>
+                    </tr>
+
+                    <!-- Long Talk 14 -->
+                    <tr>
+                        <td>16:40 - 17:20</td>
+                        <td></td>
+                        <td>Long Talk 14</td>
+                    </tr>
+
+                    <!-- Short Talk 4 -->
+                    <tr>
+                        <td>17:20 - 17:40</td>
+                        <td></td>
+                        <td>Short Talk 4</td>
+                    </tr>
+
+                    <!-- Night Programme -->
+                    <tr class="section-separator">
+                        <td colspan="3">Evening</td>
+                    </tr>
+                    <tr>
+                        <td>19:00</td>
+                        <td colspan="2">Bryggen walk & Bergen Street Food</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
     <footer>
         &copy; Conference Organizers
